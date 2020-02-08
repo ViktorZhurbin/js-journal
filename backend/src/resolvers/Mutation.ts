@@ -1,14 +1,14 @@
-import { MutationResolvers, Todo } from '../types';
+import { MutationResolvers, Todo } from "../@types/types";
 
 const Mutation: MutationResolvers = {
     createTodo: async (_, { task }, { models }) => {
         const data = await models.todoModel.create({
-            task,
+            task
         });
 
         return {
             success: true,
-            data,
+            data
         };
     },
 
@@ -16,7 +16,7 @@ const Mutation: MutationResolvers = {
         await models.todoModel.deleteOne({ id });
 
         return {
-            success: true,
+            success: true
         };
     },
 
@@ -29,7 +29,7 @@ const Mutation: MutationResolvers = {
 
         return {
             success: true,
-            data,
+            data
         };
     },
 
@@ -42,7 +42,7 @@ const Mutation: MutationResolvers = {
 
         return {
             success: true,
-            data,
+            data
         };
     },
 
@@ -53,9 +53,9 @@ const Mutation: MutationResolvers = {
 
         return {
             success: true,
-            data: { todos: newTodos },
+            data: { todos: newTodos }
         };
-    },
+    }
 };
 
 export { Mutation };

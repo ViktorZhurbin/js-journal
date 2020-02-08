@@ -6,5 +6,5 @@
         "strict": true,
         "moduleResolution": "node"
     },
-    "exclude": ["node_modules"]
+    "exclude": ["backend/src/node_modules"]
 }
