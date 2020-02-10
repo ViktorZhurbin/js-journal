@@ -4,9 +4,9 @@ import mongoose from 'mongoose';
 import express from 'express';
 import path from 'path';
 
-import { typeDefs } from './backend/src/schema';
-import { resolvers } from './backend/src/resolvers';
-import { models } from './backend/src/models';
+import { typeDefs } from './schema';
+import { resolvers } from './resolvers';
+import { models } from './models';
 
 const server = new ApolloServer({
     typeDefs,
@@ -18,9 +18,10 @@ const server = new ApolloServer({
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'frontend/dist')));
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
 // app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'frontend/dist/index.html'));
+//     res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 // });
 
 server.applyMiddleware({ app });

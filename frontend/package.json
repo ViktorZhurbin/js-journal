@@ -7,7 +7,6 @@
     "license": "ISC",
     "scripts": {
         "dev": "concurrently 'yarn start' 'yarn generate --watch'",
-        "prestart": "yarn generate",
         "start": "parcel src/index.html -p 9001",
         "prebuild": "yarn generate",
         "build": "parcel build src/index.html",
@@ -39,7 +38,6 @@
         "apollo-boost": "^0.4.7",
         "apollo-client": "^2.6.4",
         "classnames": "^2.2.6",
-        "concurrently": "^5.1.0",
         "framer-motion": "^1.8.4",
         "graphql": "^14.5.8",
         "parcel-bundler": "^1.12.4",
@@ -49,5 +47,8 @@
         "react-dom": "^16.12.0",
         "ts-loader": "^6.2.1",
         "typescript": "^3.7.4"
+    },
+    "devDependencies": {
+        "concurrently": "^5.1.0"
     }
 }
